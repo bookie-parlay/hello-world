@@ -279,3 +279,69 @@ body {
 .section-glow-bottom {
   background: radial-gradient(ellipse 60% 30% at 50% 100%, rgba(124, 92, 252, 0.06) 0%, transparent 80%);
 }
+
+/* ─── Bento Grid Cards ─── */
+
+.bento-card {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.045) 0%,
+      rgba(255, 255, 255, 0.012) 50%,
+      rgba(124, 92, 252, 0.02) 100%
+    );
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bento-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(124, 92, 252, 0.15) 0%,
+    transparent 40%,
+    transparent 60%,
+    rgba(0, 229, 191, 0.1) 100%
+  );
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.bento-card:hover {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.06) 0%,
+      rgba(255, 255, 255, 0.02) 50%,
+      rgba(124, 92, 252, 0.04) 100%
+    );
+  border-color: rgba(124, 92, 252, 0.2);
+  box-shadow:
+    0 0 0 1px rgba(124, 92, 252, 0.06),
+    0 16px 64px rgba(124, 92, 252, 0.08),
+    0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.bento-card:hover::before {
+  opacity: 1;
+}
+
+.bento-card--accent:hover {
+  border-color: rgba(0, 229, 191, 0.2);
+  box-shadow:
+    0 0 0 1px rgba(0, 229, 191, 0.06),
+    0 16px 64px rgba(0, 229, 191, 0.06),
+    0 4px 12px rgba(0, 0, 0, 0.5);
+}
