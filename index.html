@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World - Bookie Parlay</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+        }
+        .card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            max-width: 500px;
+        }
+        h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .skull { font-size: 4rem; margin-bottom: 1rem; }
+        p { color: rgba(255,255,255,0.7); font-size: 1.1rem; line-height: 1.6; }
+        .tag { display: inline-block; margin-top: 1.5rem; padding: 0.4rem 1rem; background: rgba(255,255,255,0.1); border-radius: 20px; font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="skull">&#x1F480;</div>
+        <h1>Hello, World!</h1>
+        <p>Bookie Parlay is live.<br>Built on a Raspberry Pi. Powered by OpenClaw.</p>
+        <span class="tag">bookie-parlay/hello-world</span>
+    </div>
+</body>
+</html>
