@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Sora } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,10 +7,16 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const sora = Sora({
+  variable: "--font-sora",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
+
 export const metadata: Metadata = {
-  title: "XferCredit | Instant Global Money Transfers",
+  title: "XferCredit | Premium Global Money Transfers",
   description:
-    "Send money worldwide in seconds with industry-low fees. XferCredit delivers fast, secure, and transparent cross-border payments.",
+    "Move money across borders instantly with zero friction. XferCredit delivers lightning-fast, secure, and transparent cross-border payments to 180+ countries.",
 };
 
 export default function RootLayout({
@@ -20,7 +26,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased bg-[#09090b] text-zinc-100`}>
+      <body className={`${inter.variable} ${sora.variable} font-sans antialiased bg-[#08080c] text-zinc-100`}>
+        <div className="noise-overlay" />
         {children}
       </body>
     </html>
